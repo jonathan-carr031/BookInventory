@@ -1,30 +1,41 @@
 package com.example.bookinventoryapp.presentation.home
 
+import android.net.Uri
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.AddCircle
-import androidx.compose.material.icons.filled.Home
-import androidx.compose.material.icons.filled.Menu
-import androidx.compose.material.icons.filled.Settings
+
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.bookinventoryapp.R
 import com.example.bookinventoryapp.data.Book
+import java.time.LocalDate
 
 @Composable
 fun HomePageWithBooks(books: List<Book>, modifier: Modifier = Modifier) {
-    val width = 150.dp
+//    var sliderPosition by remember { mutableFloatStateOf(0f) }
+
+//    Column {
+//        Slider(
+//            value = sliderPosition,
+//            onValueChange = { value -> sliderPosition = value },
+//            steps = 10,
+//            valueRange = 80f..200f
+//        )
     LazyVerticalGrid(
-        columns = GridCells.Adaptive(minSize = width),
+        modifier = modifier,
+        columns = GridCells.Adaptive(minSize = 80.dp),
         horizontalArrangement = Arrangement.SpaceEvenly
     ) {
-        items(books.count()) { book ->
-            BookImageButton(book = books[book], width = width)
+        items(books.count()) { bookIndex ->
+            BookImageButton(book = books[bookIndex])
         }
     }
+//    }
+
 }
 
 @Preview
@@ -32,36 +43,64 @@ fun HomePageWithBooks(books: List<Book>, modifier: Modifier = Modifier) {
 fun HomePageWithBooksPreview() {
     val books = listOf(
         Book(
-            1,
+            "NRWPDQAAQBAJ",
             "Chocolate War",
             "123456789",
             listOf("Robert Cormier"),
             summary = "Summary",
-            cover = Icons.Default.Home
+            cover = painterResource(id = R.drawable.chocolate_war_cover),
+            isbn13 = "9780375829871",
+            isbn10 = "0375829873",
+            publisher = "Ember",
+            publishedDate = LocalDate.of(2024, 9, 14),
+            pageCount = 274,
+            categories = listOf("Young Adult Fiction"),
+            coverUri = Uri.parse("http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api")
         ),
         Book(
-            2,
+            "NRWPDQAAQBAJ",
             "Chocolate War",
             "123456789",
             listOf("Robert Cormier"),
             summary = "Summary",
-            cover = Icons.Default.Menu
+            cover = painterResource(id = R.drawable.chocolate_war_cover),
+            isbn13 = "9780375829871",
+            isbn10 = "0375829873",
+            publisher = "Ember",
+            publishedDate = LocalDate.of(2024, 9, 14),
+            pageCount = 274,
+            categories = listOf("Young Adult Fiction"),
+            coverUri = Uri.parse("http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api")
         ),
         Book(
-            3,
+            "NRWPDQAAQBAJ",
             "Chocolate War",
             "123456789",
             listOf("Robert Cormier"),
             summary = "Summary",
-            cover = Icons.Default.Settings
+            cover = painterResource(id = R.drawable.chocolate_war_cover),
+            isbn13 = "9780375829871",
+            isbn10 = "0375829873",
+            publisher = "Ember",
+            publishedDate = LocalDate.of(2024, 9, 14),
+            pageCount = 274,
+            categories = listOf("Young Adult Fiction"),
+            coverUri = Uri.parse("http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api")
         ),
         Book(
-            4,
+            "NRWPDQAAQBAJ",
             "Chocolate War",
             "123456789",
             listOf("Robert Cormier"),
             summary = "Summary",
-            cover = Icons.Default.AddCircle
+            cover = painterResource(id = R.drawable.chocolate_war_cover),
+            isbn13 = "9780375829871",
+            isbn10 = "0375829873",
+            publisher = "Ember",
+            publishedDate = LocalDate.of(2024, 9, 14),
+            pageCount = 274,
+            categories = listOf("Young Adult Fiction"),
+            coverUri = Uri.parse("http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api")
         )
     )
     HomePageWithBooks(
