@@ -34,11 +34,7 @@ fun AppNavigationDrawer(drawerState: DrawerState,  content: @Composable() () -> 
                         .verticalScroll(rememberScrollState())
                 ) {
                     Spacer(Modifier.height(12.dp))
-                    Text(
-                        "Drawer Title",
-                        modifier = Modifier.padding(16.dp),
-                        style = MaterialTheme.typography.titleLarge
-                    )
+                    DrawerHeader(drawerState)
                     HorizontalDivider()
 
                     Text(

@@ -11,11 +11,13 @@ class Book(
     val authors: List<String>,
     val summary: String?,
     val cover: Painter,
-    val publisher : String,
-    val publishedDate : LocalDate,
-    val isbn13 : String,
-    val isbn10 : String,
-    val pageCount : Int,
-    val categories : List<String>,
-    val coverUri : Uri
+    val publisher: String,
+    val publishedDate: LocalDate,
+    val isbn13: String,
+    val isbn10: String,
+    val pageCount: Int,
+    val categories: List<String>,
+    val coverUri: Uri,
+    val isOwned: Boolean,
+    val isOnWishlist: Boolean
 )

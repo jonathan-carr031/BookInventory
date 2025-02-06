@@ -2,10 +2,20 @@ package com.example.bookinventoryapp.presentation.home
 
 import android.net.Uri
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Text
 
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
@@ -16,25 +26,57 @@ import java.time.LocalDate
 
 @Composable
 fun HomePageWithBooks(books: List<Book>, modifier: Modifier = Modifier) {
-//    var sliderPosition by remember { mutableFloatStateOf(0f) }
+    val wishListBooks = books.filter { book -> book.isOnWishlist }
+    val ownedBooks = books.filter { book -> book.isOwned }
 
-//    Column {
-//        Slider(
-//            value = sliderPosition,
-//            onValueChange = { value -> sliderPosition = value },
-//            steps = 10,
-//            valueRange = 80f..200f
-//        )
-    LazyVerticalGrid(
-        modifier = modifier,
-        columns = GridCells.Adaptive(minSize = 80.dp),
-        horizontalArrangement = Arrangement.SpaceEvenly
+    Column(
+        modifier = modifier.padding(0.dp, 12.dp, 0.dp, 0.dp),
     ) {
-        items(books.count()) { bookIndex ->
-            BookImageButton(book = books[bookIndex])
+        Text(
+            text = "Wishlist",
+            modifier = Modifier.padding(5.dp),
+            style = MaterialTheme.typography.titleMedium
+        )
+        Row(
+            modifier = Modifier
+                .height(150.dp)
+                .fillMaxWidth(),
+            horizontalArrangement = Arrangement.Start,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            if (wishListBooks.isEmpty()) {
+                Box(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .align(Alignment.CenterVertically),
+                ) {
+                    Text(text = "You have no books on your wishlist")
+                }
+            } else {
+                BookImageButton(wishListBooks[0])
+            }
         }
+        Spacer(modifier = Modifier.height(12.dp))
+        Text(
+            text = "My Books",
+            modifier = Modifier.padding(5.dp),
+            style = MaterialTheme.typography.titleMedium
+        )
+
+        if (ownedBooks.isEmpty()) {
+            Text(text = "You have no books")
+        } else {
+            LazyVerticalGrid(
+                columns = GridCells.Adaptive(minSize = 80.dp),
+                horizontalArrangement = Arrangement.SpaceEvenly
+            ) {
+                items(ownedBooks.count()) { bookIndex ->
+                    BookImageButton(book = ownedBooks[bookIndex])
+                }
+            }
+        }
+
     }
-//    }
 
 }
 
@@ -55,7 +97,9 @@ fun HomePageWithBooksPreview() {
             publishedDate = LocalDate.of(2024, 9, 14),
             pageCount = 274,
             categories = listOf("Young Adult Fiction"),
-            coverUri = Uri.parse("http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api")
+            coverUri = Uri.parse("http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"),
+            isOwned = true,
+            isOnWishlist = false
         ),
         Book(
             "NRWPDQAAQBAJ",
@@ -70,7 +114,9 @@ fun HomePageWithBooksPreview() {
             publishedDate = LocalDate.of(2024, 9, 14),
             pageCount = 274,
             categories = listOf("Young Adult Fiction"),
-            coverUri = Uri.parse("http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api")
+            coverUri = Uri.parse("http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"),
+            isOwned = true,
+            isOnWishlist = false
         ),
         Book(
             "NRWPDQAAQBAJ",
@@ -85,7 +131,9 @@ fun HomePageWithBooksPreview() {
             publishedDate = LocalDate.of(2024, 9, 14),
             pageCount = 274,
             categories = listOf("Young Adult Fiction"),
-            coverUri = Uri.parse("http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api")
+            coverUri = Uri.parse("http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"),
+            isOwned = false,
+            isOnWishlist = true
         ),
         Book(
             "NRWPDQAAQBAJ",
@@ -100,7 +148,9 @@ fun HomePageWithBooksPreview() {
             publishedDate = LocalDate.of(2024, 9, 14),
             pageCount = 274,
             categories = listOf("Young Adult Fiction"),
-            coverUri = Uri.parse("http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api")
+            coverUri = Uri.parse("http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"),
+            isOwned = true,
+            isOnWishlist = false
         )
     )
     HomePageWithBooks(
