@@ -99,7 +99,8 @@ fun HomePageWithBooksPreview() {
             categories = listOf("Young Adult Fiction"),
             coverUri = Uri.parse("http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"),
             isOwned = true,
-            isOnWishlist = false
+            isOnWishlist = false,
+            notes = null
         ),
         Book(
             "NRWPDQAAQBAJ",
@@ -116,7 +117,8 @@ fun HomePageWithBooksPreview() {
             categories = listOf("Young Adult Fiction"),
             coverUri = Uri.parse("http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"),
             isOwned = true,
-            isOnWishlist = false
+            isOnWishlist = false,
+            notes = null
         ),
         Book(
             "NRWPDQAAQBAJ",
@@ -133,7 +135,8 @@ fun HomePageWithBooksPreview() {
             categories = listOf("Young Adult Fiction"),
             coverUri = Uri.parse("http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"),
             isOwned = false,
-            isOnWishlist = true
+            isOnWishlist = true,
+            notes = null
         ),
         Book(
             "NRWPDQAAQBAJ",
@@ -150,7 +153,8 @@ fun HomePageWithBooksPreview() {
             categories = listOf("Young Adult Fiction"),
             coverUri = Uri.parse("http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"),
             isOwned = true,
-            isOnWishlist = false
+            isOnWishlist = false,
+            notes = null
         )
     )
     HomePageWithBooks(

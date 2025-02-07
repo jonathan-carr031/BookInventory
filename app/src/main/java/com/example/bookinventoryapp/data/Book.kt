@@ -19,5 +19,6 @@ class Book(
     val categories: List<String>,
     val coverUri: Uri,
     val isOwned: Boolean,
-    val isOnWishlist: Boolean
+    val isOnWishlist: Boolean,
+    val notes: String?
 )

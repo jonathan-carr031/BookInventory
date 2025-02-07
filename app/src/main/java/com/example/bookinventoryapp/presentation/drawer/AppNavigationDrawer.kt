@@ -19,14 +19,23 @@ import androidx.compose.material3.ModalNavigationDrawer
 import androidx.compose.material3.NavigationDrawerItem
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavHostController
+import com.example.bookinventoryapp.navigation.Routes
+import kotlinx.coroutines.launch
 
 @Composable
-fun AppNavigationDrawer(drawerState: DrawerState,  content: @Composable() () -> Unit) {
+fun AppNavigationDrawer(
+    drawerState: DrawerState,
+    navController: NavHostController,
+    content: @Composable() () -> Unit
+) {
     ModalNavigationDrawer(
         modifier = Modifier.background(MaterialTheme.colorScheme.primary),
         drawerContent = {
+            val scope = rememberCoroutineScope()
             ModalDrawerSheet {
                 Column(
                     modifier = Modifier
@@ -43,9 +52,15 @@ fun AppNavigationDrawer(drawerState: DrawerState,  content: @Composable() () -> 
                         style = MaterialTheme.typography.titleMedium
                     )
                     NavigationDrawerItem(
-                        label = { Text("Item 1") },
+                        label = { Text("Book Details") },
                         selected = false,
-                        onClick = { /* Handle click */ }
+                        onClick = {
+                            scope.launch {
+                                drawerState.close()
+                            }
+
+                            navController.navigate(Routes.BookDetails.name)
+                        }
                     )
                     NavigationDrawerItem(
                         label = { Text("Item 2") },
@@ -92,7 +107,7 @@ fun AppNavigationDrawer(drawerState: DrawerState,  content: @Composable() () -> 
             }
         },
         drawerState = drawerState
-    ){
+    ) {
         content()
     }
 }
