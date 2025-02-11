@@ -1,16 +1,31 @@
 package com.example.bookinventoryapp.navigation
 
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import androidx.navigation.compose.rememberNavController
-import com.example.bookinventoryapp.presentation.book_details.BookDetails
+import com.example.bookinventoryapp.app.Routes
+import com.example.bookinventoryapp.book.presentation.book_details.BookDetails
 
 @Composable
-fun AppNavigation() {
-    val navController = rememberNavController()
+fun AppNavigation(
+    modifier: Modifier = Modifier,
+    canNavigateBack: Boolean,
+    navController: NavHostController,
+) {
+    NavHost(
+        navController = navController,
+        startDestination = Routes.Home.name,
+        modifier = modifier
+            .fillMaxSize()
+    ) {
+        composable(route = Routes.Home.name) {
 
-    NavHost(navController = navController, startDestination = "screen1") {
-        composable("book_details") { BookDetails() }
+        }
+        composable(route = Routes.BookDetails.name) {
+            BookDetails()
+        }
     }
 }
