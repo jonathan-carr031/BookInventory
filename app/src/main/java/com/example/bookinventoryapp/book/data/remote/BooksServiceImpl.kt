@@ -21,6 +21,7 @@ class BooksServiceImpl(
                 client.get(urlString = "https://www.googleapis.com/books/v1/volumes") {
                     url {
                         parameters.append("q", "isbn:$isbn")
+                        parameters.append("q", "isbn:$isbn")
                     }
                 }
 

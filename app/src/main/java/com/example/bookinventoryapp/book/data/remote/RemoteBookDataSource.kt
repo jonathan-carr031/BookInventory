@@ -6,4 +6,5 @@ import com.example.bookinventoryapp.core.domain.Result
 
 interface RemoteBookDataSource {
     suspend fun getBooksByIsbn(isbn: String): Result<SearchResultsDto, DataError.Remote>
+    suspend fun getBookCoverImage(bookId: String): Result<ByteArray, DataError.Remote>
 }

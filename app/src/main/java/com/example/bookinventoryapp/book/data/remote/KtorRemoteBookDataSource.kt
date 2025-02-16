@@ -11,6 +11,7 @@ import io.ktor.client.request.parameter
 
 
 private const val BASE_URL = "https://www.googleapis.com/books/v1/volumes"
+private const val BASE_COVER_URL = "https://books.google.com/books/content"
 
 
 class KtorRemoteBookDataSource(
@@ -24,7 +25,28 @@ class KtorRemoteBookDataSource(
                 urlString = BASE_URL
             ) {
                 parameter("q", "isbn:$isbn")
+                parameter("key", "AIzaSyAm1Qx_BeM4fX5tKkqxuDPTWgGOpXalKWY")
             }
         }
     }
+
+    override suspend fun getBookCoverImage(
+        bookId: String
+    ): Result<ByteArray, DataError.Remote> {
+        return safeCall {
+            httpClient.get(
+                urlString = BASE_COVER_URL
+            ) {
+                parameter("id", bookId)
+                parameter("printsec", "frontcover")
+                parameter("img", 1)
+                parameter("zoom", 1)
+                parameter("edge", "curl")
+                parameter("source", "gbs_api")
+                parameter("key", "AIzaSyAm1Qx_BeM4fX5tKkqxuDPTWgGOpXalKWY")
+            }
+        }
+    }
+
+
 }

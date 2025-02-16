@@ -1,8 +1,10 @@
 package com.example.bookinventoryapp.book.presentation.book_details
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.bookinventoryapp.book.domain.BookRepository
+import com.example.bookinventoryapp.book.domain.setCover
 import com.example.bookinventoryapp.core.domain.onError
 import com.example.bookinventoryapp.core.domain.onSuccess
 import com.example.bookinventoryapp.core.presentation.toUiText
@@ -33,15 +35,29 @@ class BookDetailsViewModel(
         _state.update {
             it.copy(isLoading = true)
         }
+        Log.d("Book_Request", "Making a request for $isbn")
         bookRepository.getBookByIsbn(isbn)
-            .onSuccess { books ->
-                _state.update {
-                    it.copy(
-                        isLoading = false,
-                        errorMessage = null,
-                        selectedBook = books.first()
-                    )
-                }
+            .onSuccess { book ->
+                bookRepository.getBookCover(book.id)
+                    .onSuccess { coverImage ->
+                        book.setCover(coverImage)
+                        _state.update {
+                            it.copy(
+                                isLoading = false,
+                                errorMessage = null,
+                                selectedBook = book
+                            )
+                        }
+                    }
+                    .onError {
+                        _state.update {
+                            it.copy(
+                                isLoading = false,
+                                errorMessage = null,
+                                selectedBook = book
+                            )
+                        }
+                    }
             }
             .onError { error ->
                 _state.update {
