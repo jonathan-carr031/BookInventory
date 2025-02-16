@@ -30,6 +30,10 @@ class HomeViewModel(
             is HomeAction.OnWishlistClick -> {
                 Log.d("ViewModel Call", "OnWishlistClick::Action Happened")
             }
+
+            is HomeAction.OnFloatingActionClick -> {
+                Log.d("ViewModel Call", "OnFloatingActionClick::Action Happened")
+            }
         }
     }
 

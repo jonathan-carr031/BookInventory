@@ -1,7 +1,6 @@
 package com.example.bookinventoryapp.book.presentation.home.components
 
 import android.graphics.BitmapFactory
-import android.net.Uri
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -74,7 +73,7 @@ fun BookImageButtonPreview() {
         publishedDate = LocalDate.of(2024, 9, 14),
         pageCount = 274,
         categories = listOf("Young Adult Fiction"),
-        coverUri = Uri.parse("http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"),
+        coverUri = "http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
         isOwned = true,
         isOnWishlist = false,
         notes = null

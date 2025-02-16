@@ -1,5 +1,9 @@
 [versions]
+activityComposeVersion = "1.6.1"
 agp = "8.8.0"
+androidxCameraCore = "1.4.1"
+barcodeScanning = "17.3.0"
+core = "3.3.3"
 koinAndroid = "4.0.0"
 koinAndroidxCompose = "4.0.0"
 koinTestJunit = "4.0.0"
@@ -13,18 +17,26 @@ kotlinxSerializationJson = "1.7.3"
 ktorClientAndroid = "1.6.3"
 ktorClientCio = "3.0.3"
 ktorClientContentNegotiation = "3.0.3"
-ktorClientLogging = "1.6.3"
-ktorClientSerialization = "1.6.3"
 ktorSerializationKotlinxJson = "3.0.3"
 lifecycleRuntimeKtx = "2.8.7"
 activityCompose = "1.10.0"
 composeBom = "2025.01.01"
-logbackClassic = "1.5.15"
 navigationCompose = "2.8.6"
+playServicesCodeScanner = "16.1.0"
+ui = "1.7.7"
+uiToolingPreview = "1.7.7"
+runner = "1.6.1"
 
 [libraries]
+androidx-activity-compose-v161 = { module = "androidx.activity:activity-compose", version.ref = "activityComposeVersion" }
+androidx-camera-camera2 = { module = "androidx.camera:camera-camera2", version.ref = "androidxCameraCore" }
+androidx-camera-core = { module = "androidx.camera:camera-core", version.ref = "androidxCameraCore" }
+androidx-camera-lifecycle = { module = "androidx.camera:camera-lifecycle", version.ref = "androidxCameraCore" }
+androidx-camera-view = { module = "androidx.camera:camera-view", version.ref = "androidxCameraCore" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx-lifecycle-viewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel", version.ref = "lifecycleRuntimeKtx" }
+barcode-scanning = { module = "com.google.mlkit:barcode-scanning", version.ref = "barcodeScanning" }
+core = { module = "com.google.zxing:core", version.ref = "core" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
@@ -43,6 +55,7 @@ koin-android = { module = "io.insert-koin:koin-android", version.ref = "koinAndr
 koin-androidx-compose = { module = "io.insert-koin:koin-androidx-compose", version.ref = "koinAndroidxCompose" }
 koin-core = { module = "io.insert-koin:koin-core" }
 koin-test-junit = { module = "io.insert-koin:koin-test-junit", version.ref = "koinTestJunit" }
+kotlinx-coroutines-play-services = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-play-services" }
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
 ktor-client-android = { module = "io.ktor:ktor-client-android", version.ref = "ktorClientAndroid" }
 ktor-client-cio = { module = "io.ktor:ktor-client-cio", version.ref = "ktorClientCio" }
@@ -53,7 +66,10 @@ ktor-client-logging = { module = "io.ktor:ktor-client-logging", version.ref = "k
 ktor-client-serialization = { module = "io.ktor:ktor-client-serialization", version.ref = "ktor" }
 ktor-ktor-client-content-negotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktorClientContentNegotiation" }
 ktor-serialization-kotlinx-json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktorSerializationKotlinxJson" }
-logback-classic = { module = "ch.qos.logback:logback-classic", version.ref = "logbackClassic" }
+play-services-code-scanner = { module = "com.google.android.gms:play-services-code-scanner", version.ref = "playServicesCodeScanner" }
+ui = { module = "androidx.compose.ui:ui", version.ref = "ui" }
+ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "uiToolingPreview" }
+androidx-runner = { group = "androidx.test", name = "runner", version.ref = "runner" }
 
 
 [plugins]

@@ -20,9 +20,11 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navigation
 import androidx.navigation.toRoute
 import com.example.bookinventoryapp.book.presentation.book_details.BookDetails
+import com.example.bookinventoryapp.book.presentation.book_details.BookDetailsViewModel
 import com.example.bookinventoryapp.book.presentation.drawer.AppNavigationDrawer
 import com.example.bookinventoryapp.book.presentation.home.HomePageRoot
 import com.example.bookinventoryapp.book.presentation.home.HomeViewModel
+import com.example.bookinventoryapp.book.presentation.scanner.presentation.ScannerScreen
 import com.example.bookinventoryapp.book.presentation.topbar.AppTopBar
 import com.example.bookinventoryapp.book.presentation.wishlist.WishlistScreen
 import com.example.bookinventoryapp.ui.theme.BookInventoryAppTheme
@@ -39,7 +41,7 @@ fun App() {
 
         val drawerState = rememberDrawerState(initialValue = DrawerValue.Closed)
 
-        var canNavigateBack = remember {
+        val canNavigateBack = remember {
             mutableStateOf(false)
         }
 
@@ -86,16 +88,36 @@ fun App() {
                                         Route.Wishlist
                                     )
                                 },
+                                onFloatingActionClick = {
+                                    navController.navigate(
+                                        Route.BarcodeScanner
+                                    )
+                                }
                             )
                         }
                         composable<Route.BookDetails> { entry ->
                             val args = entry.toRoute<Route.BookDetails>()
                             Log.d("Navigation", "Book id is ${args.bookId}")
-                            canNavigateBack.value = true
-                            BookDetails()
+                            val viewmodel = koinViewModel<BookDetailsViewModel>()
+                            viewmodel.state.value.bookIsbn = args.bookId
+                            BookDetails(viewmodel)
                         }
                         composable<Route.Wishlist> {
                             WishlistScreen()
+                        }
+                        composable<Route.BarcodeScanner> {
+                            ScannerScreen(
+                                onBarcodeDetected = { barcode ->
+                                    Log.d("Barcode Detected", barcode)
+                                    navController.navigate(
+                                        Route.BookDetails(barcode)
+                                    ) {
+                                        popUpTo(Route.BarcodeScanner) {
+                                            inclusive = true
+                                        }
+                                    }
+                                }
+                            )
                         }
                     }
                 }

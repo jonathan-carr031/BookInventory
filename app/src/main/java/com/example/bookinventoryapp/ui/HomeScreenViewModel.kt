@@ -1,6 +1,5 @@
 package com.example.bookinventoryapp.ui
 
-import android.net.Uri
 import androidx.lifecycle.ViewModel
 import com.example.bookinventoryapp.book.data.HomePageUiState
 import com.example.bookinventoryapp.book.domain.Book
@@ -34,7 +33,7 @@ class HomeScreenViewModel : ViewModel() {
                 publishedDate = LocalDate.of(2024, 9, 14),
                 pageCount = 274,
                 categories = listOf("Young Adult Fiction"),
-                coverUri = Uri.parse("http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"),
+                coverUri = "http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
                 isOwned = true,
                 isOnWishlist = false,
                 notes = null
@@ -52,7 +51,7 @@ class HomeScreenViewModel : ViewModel() {
                 publishedDate = LocalDate.of(2024, 9, 14),
                 pageCount = 274,
                 categories = listOf("Young Adult Fiction"),
-                coverUri = Uri.parse("http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"),
+                coverUri = "http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
                 isOwned = true,
                 isOnWishlist = false,
                 notes = null
@@ -70,7 +69,7 @@ class HomeScreenViewModel : ViewModel() {
                 publishedDate = LocalDate.of(2024, 9, 14),
                 pageCount = 274,
                 categories = listOf("Young Adult Fiction"),
-                coverUri = Uri.parse("http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"),
+                coverUri = "http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
                 isOwned = false,
                 isOnWishlist = true,
                 notes = null
@@ -88,7 +87,7 @@ class HomeScreenViewModel : ViewModel() {
                 publishedDate = LocalDate.of(2024, 9, 14),
                 pageCount = 274,
                 categories = listOf("Young Adult Fiction"),
-                coverUri = Uri.parse("http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"),
+                coverUri = "http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
                 isOwned = false,
                 isOnWishlist = true,
                 notes = null
@@ -106,7 +105,7 @@ class HomeScreenViewModel : ViewModel() {
                 publishedDate = LocalDate.of(2024, 9, 14),
                 pageCount = 274,
                 categories = listOf("Young Adult Fiction"),
-                coverUri = Uri.parse("http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"),
+                coverUri = "http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
                 isOwned = false,
                 isOnWishlist = true,
                 notes = null
@@ -124,7 +123,7 @@ class HomeScreenViewModel : ViewModel() {
                 publishedDate = LocalDate.of(2024, 9, 14),
                 pageCount = 274,
                 categories = listOf("Young Adult Fiction"),
-                coverUri = Uri.parse("http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"),
+                coverUri = "http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
                 isOwned = false,
                 isOnWishlist = true,
                 notes = null
@@ -142,7 +141,7 @@ class HomeScreenViewModel : ViewModel() {
                 publishedDate = LocalDate.of(2024, 9, 14),
                 pageCount = 274,
                 categories = listOf("Young Adult Fiction"),
-                coverUri = Uri.parse("http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"),
+                coverUri = "http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
                 isOwned = false,
                 isOnWishlist = true,
                 notes = null
@@ -160,7 +159,7 @@ class HomeScreenViewModel : ViewModel() {
                 publishedDate = LocalDate.of(2024, 9, 14),
                 pageCount = 274,
                 categories = listOf("Young Adult Fiction"),
-                coverUri = Uri.parse("http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"),
+                coverUri = "http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
                 isOwned = false,
                 isOnWishlist = true,
                 notes = null
@@ -178,7 +177,7 @@ class HomeScreenViewModel : ViewModel() {
                 publishedDate = LocalDate.of(2024, 9, 14),
                 pageCount = 274,
                 categories = listOf("Young Adult Fiction"),
-                coverUri = Uri.parse("http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"),
+                coverUri = "http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
                 isOwned = false,
                 isOnWishlist = true,
                 notes = null
@@ -196,7 +195,7 @@ class HomeScreenViewModel : ViewModel() {
                 publishedDate = LocalDate.of(2024, 9, 14),
                 pageCount = 274,
                 categories = listOf("Young Adult Fiction"),
-                coverUri = Uri.parse("http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"),
+                coverUri = "http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
                 isOwned = false,
                 isOnWishlist = true,
                 notes = null
@@ -214,7 +213,7 @@ class HomeScreenViewModel : ViewModel() {
                 publishedDate = LocalDate.of(2024, 9, 14),
                 pageCount = 274,
                 categories = listOf("Young Adult Fiction"),
-                coverUri = Uri.parse("http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"),
+                coverUri = "http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
                 isOwned = false,
                 isOnWishlist = true,
                 notes = null
@@ -232,7 +231,7 @@ class HomeScreenViewModel : ViewModel() {
                 publishedDate = LocalDate.of(2024, 9, 14),
                 pageCount = 274,
                 categories = listOf("Young Adult Fiction"),
-                coverUri = Uri.parse("http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"),
+                coverUri = "http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
                 isOwned = false,
                 isOnWishlist = true,
                 notes = null
@@ -250,7 +249,7 @@ class HomeScreenViewModel : ViewModel() {
                 publishedDate = LocalDate.of(2024, 9, 14),
                 pageCount = 274,
                 categories = listOf("Young Adult Fiction"),
-                coverUri = Uri.parse("http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"),
+                coverUri = "http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
                 isOwned = false,
                 isOnWishlist = true,
                 notes = null
@@ -268,7 +267,7 @@ class HomeScreenViewModel : ViewModel() {
                 publishedDate = LocalDate.of(2024, 9, 14),
                 pageCount = 274,
                 categories = listOf("Young Adult Fiction"),
-                coverUri = Uri.parse("http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"),
+                coverUri = "http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
                 isOwned = false,
                 isOnWishlist = true,
                 notes = null
@@ -286,7 +285,7 @@ class HomeScreenViewModel : ViewModel() {
                 publishedDate = LocalDate.of(2024, 9, 14),
                 pageCount = 274,
                 categories = listOf("Young Adult Fiction"),
-                coverUri = Uri.parse("http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"),
+                coverUri = "http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
                 isOwned = false,
                 isOnWishlist = true,
                 notes = null
@@ -304,7 +303,7 @@ class HomeScreenViewModel : ViewModel() {
                 publishedDate = LocalDate.of(2024, 9, 14),
                 pageCount = 274,
                 categories = listOf("Young Adult Fiction"),
-                coverUri = Uri.parse("http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"),
+                coverUri = "http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
                 isOwned = false,
                 isOnWishlist = true,
                 notes = null
@@ -322,7 +321,7 @@ class HomeScreenViewModel : ViewModel() {
                 publishedDate = LocalDate.of(2024, 9, 14),
                 pageCount = 274,
                 categories = listOf("Young Adult Fiction"),
-                coverUri = Uri.parse("http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"),
+                coverUri = "http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
                 isOwned = false,
                 isOnWishlist = true,
                 notes = null
@@ -340,7 +339,7 @@ class HomeScreenViewModel : ViewModel() {
                 publishedDate = LocalDate.of(2024, 9, 14),
                 pageCount = 274,
                 categories = listOf("Young Adult Fiction"),
-                coverUri = Uri.parse("http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"),
+                coverUri = "http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
                 isOwned = false,
                 isOnWishlist = true,
                 notes = null
@@ -358,7 +357,7 @@ class HomeScreenViewModel : ViewModel() {
                 publishedDate = LocalDate.of(2024, 9, 14),
                 pageCount = 274,
                 categories = listOf("Young Adult Fiction"),
-                coverUri = Uri.parse("http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"),
+                coverUri = "http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
                 isOwned = false,
                 isOnWishlist = true,
                 notes = null
@@ -376,7 +375,7 @@ class HomeScreenViewModel : ViewModel() {
                 publishedDate = LocalDate.of(2024, 9, 14),
                 pageCount = 274,
                 categories = listOf("Young Adult Fiction"),
-                coverUri = Uri.parse("http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"),
+                coverUri = "http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
                 isOwned = false,
                 isOnWishlist = true,
                 notes = null
@@ -394,7 +393,7 @@ class HomeScreenViewModel : ViewModel() {
                 publishedDate = LocalDate.of(2024, 9, 14),
                 pageCount = 274,
                 categories = listOf("Young Adult Fiction"),
-                coverUri = Uri.parse("http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"),
+                coverUri = "http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
                 isOwned = false,
                 isOnWishlist = true,
                 notes = null
@@ -412,7 +411,7 @@ class HomeScreenViewModel : ViewModel() {
                 publishedDate = LocalDate.of(2024, 9, 14),
                 pageCount = 274,
                 categories = listOf("Young Adult Fiction"),
-                coverUri = Uri.parse("http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"),
+                coverUri = "http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
                 isOwned = false,
                 isOnWishlist = true,
                 notes = null
@@ -430,7 +429,7 @@ class HomeScreenViewModel : ViewModel() {
                 publishedDate = LocalDate.of(2024, 9, 14),
                 pageCount = 274,
                 categories = listOf("Young Adult Fiction"),
-                coverUri = Uri.parse("http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"),
+                coverUri = "http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
                 isOwned = false,
                 isOnWishlist = true,
                 notes = null
@@ -448,7 +447,7 @@ class HomeScreenViewModel : ViewModel() {
                 publishedDate = LocalDate.of(2024, 9, 14),
                 pageCount = 274,
                 categories = listOf("Young Adult Fiction"),
-                coverUri = Uri.parse("http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"),
+                coverUri = "http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
                 isOwned = false,
                 isOnWishlist = true,
                 notes = null
@@ -466,7 +465,7 @@ class HomeScreenViewModel : ViewModel() {
                 publishedDate = LocalDate.of(2024, 9, 14),
                 pageCount = 274,
                 categories = listOf("Young Adult Fiction"),
-                coverUri = Uri.parse("http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"),
+                coverUri = "http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
                 isOwned = false,
                 isOnWishlist = true,
                 notes = null
@@ -484,7 +483,7 @@ class HomeScreenViewModel : ViewModel() {
                 publishedDate = LocalDate.of(2024, 9, 14),
                 pageCount = 274,
                 categories = listOf("Young Adult Fiction"),
-                coverUri = Uri.parse("http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"),
+                coverUri = "http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
                 isOwned = false,
                 isOnWishlist = true,
                 notes = null
@@ -502,7 +501,7 @@ class HomeScreenViewModel : ViewModel() {
                 publishedDate = LocalDate.of(2024, 9, 14),
                 pageCount = 274,
                 categories = listOf("Young Adult Fiction"),
-                coverUri = Uri.parse("http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"),
+                coverUri = "http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
                 isOwned = false,
                 isOnWishlist = true,
                 notes = null
@@ -520,7 +519,7 @@ class HomeScreenViewModel : ViewModel() {
                 publishedDate = LocalDate.of(2024, 9, 14),
                 pageCount = 274,
                 categories = listOf("Young Adult Fiction"),
-                coverUri = Uri.parse("http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"),
+                coverUri = "http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
                 isOwned = false,
                 isOnWishlist = true,
                 notes = null
@@ -538,7 +537,7 @@ class HomeScreenViewModel : ViewModel() {
                 publishedDate = LocalDate.of(2024, 9, 14),
                 pageCount = 274,
                 categories = listOf("Young Adult Fiction"),
-                coverUri = Uri.parse("http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"),
+                coverUri = "http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
                 isOwned = false,
                 isOnWishlist = true,
                 notes = null
@@ -556,7 +555,7 @@ class HomeScreenViewModel : ViewModel() {
                 publishedDate = LocalDate.of(2024, 9, 14),
                 pageCount = 274,
                 categories = listOf("Young Adult Fiction"),
-                coverUri = Uri.parse("http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"),
+                coverUri = "http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
                 isOwned = false,
                 isOnWishlist = true,
                 notes = null
@@ -574,7 +573,7 @@ class HomeScreenViewModel : ViewModel() {
                 publishedDate = LocalDate.of(2024, 9, 14),
                 pageCount = 274,
                 categories = listOf("Young Adult Fiction"),
-                coverUri = Uri.parse("http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"),
+                coverUri = "http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
                 isOwned = true,
                 isOnWishlist = false,
                 notes = null
@@ -592,7 +591,7 @@ class HomeScreenViewModel : ViewModel() {
                 publishedDate = LocalDate.of(2024, 9, 14),
                 pageCount = 274,
                 categories = listOf("Young Adult Fiction"),
-                coverUri = Uri.parse("http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"),
+                coverUri = "http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
                 isOwned = false,
                 isOnWishlist = false,
                 notes = null

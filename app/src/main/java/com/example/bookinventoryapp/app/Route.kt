@@ -15,4 +15,7 @@ sealed interface Route {
 
     @Serializable
     data object Wishlist : Route
+
+    @Serializable
+    data object BarcodeScanner : Route
 }

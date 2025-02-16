@@ -7,7 +7,6 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.example.bookinventoryapp.app.Routes
-import com.example.bookinventoryapp.book.presentation.book_details.BookDetails
 
 @Composable
 fun AppNavigation(
@@ -25,7 +24,7 @@ fun AppNavigation(
 
         }
         composable(route = Routes.BookDetails.name) {
-            BookDetails()
+//            BookDetails()
         }
     }
 }

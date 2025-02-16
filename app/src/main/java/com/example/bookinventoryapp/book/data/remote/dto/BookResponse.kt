@@ -1,6 +1,5 @@
 package com.example.bookinventoryapp.book.data.remote.dto
 
-import android.net.Uri
 import com.example.bookinventoryapp.book.domain.Book
 import kotlinx.serialization.Serializable
 import java.time.LocalDate
@@ -26,7 +25,7 @@ fun BookResponse.toBook(): Book {
         publishedDate = LocalDate.of(2024, 9, 14),
         pageCount = 274,
         categories = listOf("Young Adult Fiction"),
-        coverUri = Uri.parse("http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"),
+        coverUri = "http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
         isOwned = false,
         isOnWishlist = false,
         notes = null

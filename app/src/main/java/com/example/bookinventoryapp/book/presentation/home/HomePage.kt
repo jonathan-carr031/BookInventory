@@ -1,15 +1,17 @@
 package com.example.bookinventoryapp.book.presentation.home
 
-import android.util.Log
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.example.bookinventoryapp.app.Routes
 import com.example.bookinventoryapp.book.domain.Book
 import com.example.bookinventoryapp.ui.components.AppFloatingActionButton
 import org.koin.androidx.compose.koinViewModel
@@ -18,7 +20,8 @@ import org.koin.androidx.compose.koinViewModel
 fun HomePageRoot(
     viewModel: HomeViewModel = koinViewModel(),
     onBookClick: (Book) -> Unit,
-    onWishlistClick: (String) -> Unit
+    onWishlistClick: (String) -> Unit,
+    onFloatingActionClick: (String) -> Unit
 ) {
     val state by viewModel.state.collectAsStateWithLifecycle()
 
@@ -30,7 +33,7 @@ fun HomePageRoot(
             when (action) {
                 is HomeAction.OnBookClick -> onBookClick(action.book)
                 is HomeAction.OnWishlistClick -> onWishlistClick(action.route)
-                else -> Unit
+                is HomeAction.OnFloatingActionClick -> onFloatingActionClick(action.route)
             }
 
             viewModel.onAction(action)
@@ -44,6 +47,10 @@ private fun HomePageScreen(
     state: HomeState,
     onAction: (HomeAction) -> Unit
 ) {
+    val isScanning = remember {
+        mutableStateOf(false)
+    }
+
     if (state.ownedBooks.isEmpty() && state.wishlistBooks.isEmpty()) {
         HomePageNoBooks(
             modifier = Modifier
@@ -65,11 +72,8 @@ private fun HomePageScreen(
             imageVector = Icons.Default.Add,
             contentDescription = "Scan Book",
             onClickAction = {
-                /*TODO : Navigate to Scan Page*/
-                Log.d(
-                    "FloatingActionButton",
-                    "floating action button clicked"
-                )
+                isScanning.value = true
+                onAction(HomeAction.OnFloatingActionClick(Routes.Scan.name))
             }
         )
     }
@@ -79,7 +83,7 @@ private fun HomePageScreen(
 @Preview
 @Composable
 fun HomePagePreview() {
-    val viewModel = HomeViewModel()
+    val viewModel = koinViewModel<HomeViewModel>()
     viewModel.getBooks()
 
     val state = HomeState()

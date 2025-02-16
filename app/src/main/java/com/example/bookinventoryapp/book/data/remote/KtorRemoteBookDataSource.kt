@@ -21,7 +21,7 @@ class KtorRemoteBookDataSource(
     ): Result<SearchResultsDto, DataError.Remote> {
         return safeCall {
             httpClient.get(
-                urlString = "$BASE_URL?q="
+                urlString = BASE_URL
             ) {
                 parameter("q", "isbn:$isbn")
             }

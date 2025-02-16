@@ -47,7 +47,8 @@ fun AppFloatingActionButtonPreview() {
         imageVector = Icons.Default.PlayArrow,
         contentDescription = "Floating Action Button",
         onClickAction = {
-            Log.d("Floating_Action", "Floating Action Clicked")
+
+        Log.d("Floating_Action", "Floating Action Clicked")
         }
     )
 }

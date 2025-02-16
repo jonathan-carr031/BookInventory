@@ -1,6 +1,5 @@
 package com.example.bookinventoryapp.book.presentation.home
 
-import android.net.Uri
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
@@ -130,7 +129,7 @@ fun HomePageWithBooksPreview() {
             publishedDate = LocalDate.of(2024, 9, 14),
             pageCount = 274,
             categories = listOf("Young Adult Fiction"),
-            coverUri = Uri.parse("http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"),
+            coverUri = "http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
             isOwned = true,
             isOnWishlist = false,
             notes = null
@@ -148,7 +147,7 @@ fun HomePageWithBooksPreview() {
             publishedDate = LocalDate.of(2024, 9, 14),
             pageCount = 274,
             categories = listOf("Young Adult Fiction"),
-            coverUri = Uri.parse("http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"),
+            coverUri = "http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
             isOwned = true,
             isOnWishlist = false,
             notes = null
@@ -166,7 +165,7 @@ fun HomePageWithBooksPreview() {
             publishedDate = LocalDate.of(2024, 9, 14),
             pageCount = 274,
             categories = listOf("Young Adult Fiction"),
-            coverUri = Uri.parse("http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"),
+            coverUri = "http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
             isOwned = false,
             isOnWishlist = true,
             notes = null
@@ -184,7 +183,7 @@ fun HomePageWithBooksPreview() {
             publishedDate = LocalDate.of(2024, 9, 14),
             pageCount = 274,
             categories = listOf("Young Adult Fiction"),
-            coverUri = Uri.parse("http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"),
+            coverUri = "http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
             isOwned = true,
             isOnWishlist = false,
             notes = null
@@ -204,7 +203,7 @@ fun HomePageWithBooksPreview() {
             publishedDate = LocalDate.of(2024, 9, 14),
             pageCount = 274,
             categories = listOf("Young Adult Fiction"),
-            coverUri = Uri.parse("http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"),
+            coverUri = "http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
             isOwned = true,
             isOnWishlist = false,
             notes = null
@@ -222,7 +221,7 @@ fun HomePageWithBooksPreview() {
             publishedDate = LocalDate.of(2024, 9, 14),
             pageCount = 274,
             categories = listOf("Young Adult Fiction"),
-            coverUri = Uri.parse("http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"),
+            coverUri = "http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
             isOwned = true,
             isOnWishlist = false,
             notes = null
@@ -240,7 +239,7 @@ fun HomePageWithBooksPreview() {
             publishedDate = LocalDate.of(2024, 9, 14),
             pageCount = 274,
             categories = listOf("Young Adult Fiction"),
-            coverUri = Uri.parse("http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"),
+            coverUri = "http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
             isOwned = false,
             isOnWishlist = true,
             notes = null
@@ -258,7 +257,7 @@ fun HomePageWithBooksPreview() {
             publishedDate = LocalDate.of(2024, 9, 14),
             pageCount = 274,
             categories = listOf("Young Adult Fiction"),
-            coverUri = Uri.parse("http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"),
+            coverUri = "http://books.google.com/books/content?id=NRWPDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
             isOwned = true,
             isOnWishlist = false,
             notes = null

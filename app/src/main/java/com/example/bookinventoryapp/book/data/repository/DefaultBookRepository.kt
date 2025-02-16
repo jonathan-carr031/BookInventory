@@ -17,11 +17,14 @@ class DefaultBookRepository(
     }
 
     override suspend fun getBookByIsbn(isbn: String): Result<List<Book>, DataError.Remote> {
-        return remoteBookDataSource.getBooksByIsbn(isbn)
+        val books = remoteBookDataSource.getBooksByIsbn(isbn)
             .map { dto ->
                 dto.items.map {
                     it.toBook()
                 }
             }
+
+        return books
+
     }
 }
