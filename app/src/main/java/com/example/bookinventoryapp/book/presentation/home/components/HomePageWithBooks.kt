@@ -1,4 +1,4 @@
-package com.example.bookinventoryapp.book.presentation.home
+package com.example.bookinventoryapp.book.presentation.home.components
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.horizontalScroll
@@ -25,7 +25,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.bookinventoryapp.app.Routes
 import com.example.bookinventoryapp.book.domain.Book
-import com.example.bookinventoryapp.book.presentation.home.components.BookImageButton
 import java.time.LocalDate
 
 @Composable

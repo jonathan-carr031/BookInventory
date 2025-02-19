@@ -30,7 +30,7 @@ import kotlinx.coroutines.launch
 fun AppNavigationDrawer(
     drawerState: DrawerState,
     navController: NavHostController,
-    content: @Composable() () -> Unit
+    content: @Composable () -> Unit
 ) {
     ModalNavigationDrawer(
         modifier = Modifier.background(MaterialTheme.colorScheme.primary),

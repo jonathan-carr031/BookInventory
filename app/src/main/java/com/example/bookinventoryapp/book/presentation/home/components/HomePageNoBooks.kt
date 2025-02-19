@@ -1,4 +1,4 @@
-package com.example.bookinventoryapp.book.presentation.home
+package com.example.bookinventoryapp.book.presentation.home.components
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column

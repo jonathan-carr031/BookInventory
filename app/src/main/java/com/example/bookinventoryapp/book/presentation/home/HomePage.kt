@@ -13,6 +13,8 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.example.bookinventoryapp.app.Routes
 import com.example.bookinventoryapp.book.domain.Book
+import com.example.bookinventoryapp.book.presentation.home.components.HomePageNoBooks
+import com.example.bookinventoryapp.book.presentation.home.components.HomePageWithBooks
 import com.example.bookinventoryapp.ui.components.AppFloatingActionButton
 import org.koin.androidx.compose.koinViewModel
 
