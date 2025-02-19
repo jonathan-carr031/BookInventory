@@ -23,12 +23,10 @@ import androidx.compose.ui.unit.dp
 fun BookNotes(
     bookNotes: String
 ) {
-    Spacer(Modifier.height(3.dp))
     HorizontalDivider(thickness = 2.dp)
-    Spacer(Modifier.height(3.dp))
     Row(
         modifier = Modifier
-            .padding(5.dp)
+            .padding(5.dp, 6.dp, 5.dp, 6.dp)
             .defaultMinSize(minHeight = 150.dp)
     ) {
         Column {
