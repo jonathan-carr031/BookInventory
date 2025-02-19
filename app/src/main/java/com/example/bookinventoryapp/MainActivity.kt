@@ -34,13 +34,6 @@ class MainActivity : ComponentActivity() {
             setupKoin(this@MainActivity)
             requestPermissions()
 
-//            val book = produceState<List<Book>>(
-//                initialValue = emptyList(),
-//                producer = {
-//                    value = booksService.getBookByIsbn("9780375829871")
-//                }
-//            )
-
             App()
         }
     }

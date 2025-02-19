@@ -14,7 +14,6 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarColors
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.rememberCoroutineScope
-import androidx.compose.ui.Modifier
 import com.example.bookinventoryapp.app.Routes
 import kotlinx.coroutines.launch
 
@@ -24,8 +23,7 @@ fun AppTopBar(
     currentScreen: Routes,
     drawerState: DrawerState,
     canNavigateBack: Boolean,
-    navigateUp: () -> Unit,
-    modifier: Modifier = Modifier
+    navigateUp: () -> Unit
 ) {
     val scope = rememberCoroutineScope()
     TopAppBar(
@@ -78,10 +76,3 @@ fun AppTopBar(
         }
     )
 }
-//
-//@Preview
-//@Composable
-//fun AppTopBarPreview() {
-//    val drawerState = rememberDrawerState(initialValue = DrawerValue.Closed)
-//    AppTopBar(drawerState)
-//}
