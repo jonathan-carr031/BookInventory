@@ -1,6 +1,7 @@
 package com.example.bookinventoryapp.book.data.remote
 
 
+import com.example.bookinventoryapp.BuildConfig
 import com.example.bookinventoryapp.book.data.dto.SearchResultsDto
 import com.example.bookinventoryapp.core.data.safeCall
 import com.example.bookinventoryapp.core.domain.DataError
@@ -15,7 +16,7 @@ private const val BASE_COVER_URL = "https://books.google.com/books/content"
 
 
 class KtorRemoteBookDataSource(
-    private val httpClient: HttpClient
+    private val httpClient: HttpClient,
 ) : RemoteBookDataSource {
     override suspend fun getBooksByIsbn(
         isbn: String
@@ -25,7 +26,7 @@ class KtorRemoteBookDataSource(
                 urlString = BASE_URL
             ) {
                 parameter("q", "isbn:$isbn")
-                parameter("key", "AIzaSyAm1Qx_BeM4fX5tKkqxuDPTWgGOpXalKWY")
+                parameter("key", BuildConfig.API_KEY)
             }
         }
     }
@@ -43,7 +44,7 @@ class KtorRemoteBookDataSource(
                 parameter("zoom", 1)
                 parameter("edge", "curl")
                 parameter("source", "gbs_api")
-                parameter("key", "AIzaSyAm1Qx_BeM4fX5tKkqxuDPTWgGOpXalKWY")
+                parameter("key", BuildConfig.API_KEY)
             }
         }
     }
