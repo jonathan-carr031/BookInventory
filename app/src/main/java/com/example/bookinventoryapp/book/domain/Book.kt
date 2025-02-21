@@ -15,7 +15,7 @@ data class Book(
     val isbn10: String,
     val pageCount: Int,
     val categories: List<String>,
-    val coverUri: String,
+    val coverUri: String?,
     val isOwned: Boolean,
     val isOnWishlist: Boolean,
     val notes: String?

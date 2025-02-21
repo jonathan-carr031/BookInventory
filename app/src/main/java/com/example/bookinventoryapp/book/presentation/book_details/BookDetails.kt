@@ -1,5 +1,6 @@
 package com.example.bookinventoryapp.book.presentation.book_details
 
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -7,8 +8,11 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Edit
+import androidx.compose.material3.Button
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
@@ -60,6 +64,20 @@ fun BookDetails(
             contentDescription = "Edit",
             onClickAction = { /*TODO navigate to edit details page*/ },
         )
+    } else {
+        Box(
+            modifier = Modifier.fillMaxSize(),
+            contentAlignment = Alignment.Center
+        ) {
+            Column {
+                Text(text = "No Book Found with ISBN: ${state.bookIsbn}")
+                Button(
+                    onClick = {}
+                ) {
+                    Text(text = "Add One")
+                }
+            }
+        }
     }
 
 }

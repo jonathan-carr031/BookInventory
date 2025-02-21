@@ -18,7 +18,7 @@ fun SearchResultItemDto.toBook(): Book {
         publishedDate = LocalDate.of(2024, 9, 14),
         pageCount = this.volumeInfo.pageCount,
         categories = this.volumeInfo.authors,
-        coverUri = this.volumeInfo.imageLinks.thumbnail,
+        coverUri = this.volumeInfo.imageLinks?.thumbnail,
         isOwned = false,
         isOnWishlist = false,
         notes = null

@@ -16,6 +16,6 @@ data class VolumeInfoDto(
     @SerialName("averageRating") val averageRating: Int = 0,
     @SerialName("ratingsCount") val ratingsCount: Int = 0,
     @SerialName("maturityRating") val maturityRating: String = "",
-    @SerialName("imageLinks") val imageLinks: ImageLinkDto,
+    @SerialName("imageLinks") val imageLinks: ImageLinkDto? = null,
     @SerialName("language") val language: String = "",
 )

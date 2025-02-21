@@ -38,26 +38,36 @@ class BookDetailsViewModel(
         Log.d("Book_Request", "Making a request for $isbn")
         bookRepository.getBookByIsbn(isbn)
             .onSuccess { book ->
-                bookRepository.getBookCover(book.id)
-                    .onSuccess { coverImage ->
-                        book.setCover(coverImage)
-                        _state.update {
-                            it.copy(
-                                isLoading = false,
-                                errorMessage = null,
-                                selectedBook = book
-                            )
+                if (book != null) {
+                    bookRepository.getBookCover(book.id)
+                        .onSuccess { coverImage ->
+                            book.setCover(coverImage)
+                            _state.update {
+                                it.copy(
+                                    isLoading = false,
+                                    errorMessage = null,
+                                    selectedBook = book
+                                )
+                            }
                         }
-                    }
-                    .onError {
-                        _state.update {
-                            it.copy(
-                                isLoading = false,
-                                errorMessage = null,
-                                selectedBook = book
-                            )
+                        .onError {
+                            _state.update {
+                                it.copy(
+                                    isLoading = false,
+                                    errorMessage = null,
+                                    selectedBook = book
+                                )
+                            }
                         }
+                } else {
+                    _state.update {
+                        it.copy(
+                            isLoading = false,
+                            errorMessage = null,
+                            selectedBook = null
+                        )
                     }
+                }
             }
             .onError { error ->
                 _state.update {

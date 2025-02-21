@@ -16,12 +16,12 @@ class DefaultBookRepository(
         TODO("Not yet implemented")
     }
 
-    override suspend fun getBookByIsbn(isbn: String): Result<Book, DataError.Remote> {
+    override suspend fun getBookByIsbn(isbn: String): Result<Book?, DataError.Remote> {
         val result = remoteBookDataSource.getBooksByIsbn(isbn)
             .map { dto ->
                 dto.items.map {
                     it.toBook()
-                }.first()
+                }.firstOrNull()
             }
 
         return result

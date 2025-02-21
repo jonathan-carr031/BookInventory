@@ -7,5 +7,5 @@ import kotlinx.serialization.Serializable
 data class SearchResultsDto(
     @SerialName("kind") val kind: String,
     @SerialName("totalItems") val totalItems: Int,
-    @SerialName("items") val items: List<SearchResultItemDto>,
+    @SerialName("items") val items: List<SearchResultItemDto> = emptyList(),
 )
